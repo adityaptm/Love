@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADIT SAYANG ERINE?</title>
+    <link rel="stylesheet" href="love.css" />
+  </head>
+  <body>
+    <!-- GIF pertama di atas tombol -->
+    <img id="love-gif" src="Love Heart Gif.gif" alt="Love Heart Animation" />
+
+    <!-- Tombol YES dan NO -->
+    <div id="button-container">
+      <input id="yes-button" type="button" value="YES" onclick="showYesGif()" />
+      <input id="no-button" type="button" value="NO" onclick="showNoGif()" />
+    </div>
+
+    <!-- Kontainer GIF YES yang akan muncul saat tombol YES diklik -->
+    <div id="yes-gif-container" style="display: none">
+      <p id="no-text">Awwwww aku malu 🫶🏻🥹❤️‍🩹</p>
+      <img id="yes-gif" src="larine gif.gif" alt="Yes Love Animation" />
+    </div>
+
+    <!-- Kontainer GIF NO yang akan muncul saat tombol NO diklik -->
+    <div id="no-gif-container" style="display: none">
+      <p id="no-text">Awas yah kamu! 😠🫵</p>
+      <!-- Teks untuk GIF NO -->
+      <img id="no-gif" src="marah.gif" alt="No Love Animation" />
+    </div>
+
+    <script src="love.js"></script>
+    <script>
+      // Fungsi untuk menampilkan GIF YES dan menyembunyikan tombol YES dan NO
+      function showYesGif() {
+        const loveGif = document.getElementById("love-gif");
+        const yesGifContainer = document.getElementById("yes-gif-container");
+        const noGifContainer = document.getElementById("no-gif-container");
+        const yesButton = document.getElementById("yes-button");
+        const noButton = document.getElementById("no-button");
+
+        // Menampilkan GIF YES
+        yesGifContainer.style.display = "block";
+        loveGif.style.display = "none"; // Menyembunyikan GIF pertama
+
+        // Menyembunyikan tombol YES dan NO
+        yesButton.style.display = "none";
+        noButton.style.display = "none";
+
+        // Menyembunyikan GIF NO jika tampil
+        noGifContainer.style.display = "none";
+      }
+
+      // Fungsi untuk menampilkan GIF NO dan menyembunyikan tombol YES dan NO
+      function showNoGif() {
+        const loveGif = document.getElementById("love-gif");
+        const yesGifContainer = document.getElementById("yes-gif-container");
+        const noGifContainer = document.getElementById("no-gif-container");
+        const yesButton = document.getElementById("yes-button");
+        const noButton = document.getElementById("no-button");
+
+        // Menampilkan GIF NO
+        noGifContainer.style.display = "block";
+        loveGif.style.display = "none"; // Menyembunyikan GIF pertama
+
+        // Menyembunyikan tombol YES dan NO
+        yesButton.style.display = "none";
+        noButton.style.display = "none";
+
+        // Menyembunyikan GIF YES jika tampil
+        yesGifContainer.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
